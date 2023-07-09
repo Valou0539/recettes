@@ -325,11 +325,7 @@
 
 
         setTimeout(() => {
-            if (fetchMethod === 'post') {
-                navigateTo('/recettes/' + encodeURIComponent(recipeName.value.replace(/ /g, "-")))
-            } else {
-                window.location.reload(true)
-            }
+            navigateTo('/recettes/' + encodeURIComponent(recipeName.value.replace(/ /g, "-")))
         }, 500)
         
     }
