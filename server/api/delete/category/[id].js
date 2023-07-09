@@ -6,10 +6,12 @@ export default defineEventHandler(async (event) => {
 
     const { id } = event.context.params
 
-    await $fetch(`${APIUrl}/category/${id}`, {
+    const response = await $fetch(`${APIUrl}/category/${id}`, {
         method: 'DELETE',
         headers: {
             'X-CSRF-Token': token,
         }
     })
+
+    return response
 })
